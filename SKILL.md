@@ -12,6 +12,8 @@ tags:
   - conversations
   - analytics
   - support
+  - shoptet
+  - upgates
 metadata:
   clawdis:
     primaryEnv: CHATERIMO_API_KEY
@@ -26,11 +28,15 @@ metadata:
 
 # Chaterimo - AI Customer Service for Shopify & E-commerce
 
-Connect your Chaterimo AI chatbot to OpenClaw. Query customer conversations, analyze chatbot performance, and get insights from your Shopify store's customer service data.
+Connect your Chaterimo AI chatbot to OpenClaw. Query customer conversations, analyze chatbot performance, and get insights from your e-commerce store's customer service data.
 
 ## What is Chaterimo?
 
-Chaterimo is an AI-powered customer service platform that integrates with **Shopify**, Shoptet, WooCommerce, and other e-commerce platforms. It provides 24/7 automated customer support using GPT-4, Claude, and Gemini AI models.
+Chaterimo is an AI-powered customer service platform that integrates with **Shopify**, **Shoptet**, **Upgates**, and **eshop-rychle.cz** e-commerce platforms. It provides 24/7 automated customer support powered by leading LLM models: **ChatGPT**, **Claude**, **Gemini**, and **Grok**.
+
+You can use Chaterimo with your own API keys (BYOK - Bring Your Own Key) or choose a custom plan with included AI credits.
+
+📖 **Learn more:** [How to connect Chaterimo with Shopify](https://www.chaterimo.com/en/blog/shopify-ai-customer-service/)
 
 ## What can this skill do?
 
@@ -49,12 +55,12 @@ View customer service conversations with filters by date and platform. All custo
 > "Show me conversation #123"
 > "What did customers ask about yesterday?"
 
-Get full conversation transcripts between customers and your AI chatbot.
+Get full conversation transcripts between customers and your AI chatbot. All personally identifiable information is automatically redacted.
 
 ## Setup
 
 1. Sign up at [chaterimo.com](https://www.chaterimo.com)
-2. Connect your Shopify store (or other e-commerce platform)
+2. Connect your e-commerce platform (Shopify, Shoptet, Upgates, or eshop-rychle.cz)
 3. Go to **API Keys** in your dashboard
 4. Click **Create API Key** and copy the key
 5. Set the environment variable:
@@ -71,21 +77,49 @@ Get full conversation transcripts between customers and your AI chatbot.
 | `GET /api/v1/chatbots/{id}/conversations/` | List conversations |
 | `GET /api/v1/conversations/{id}/` | Get conversation transcript |
 
-## Privacy & Security
+## Privacy & Data Security
 
-- All customer PII (emails, phone numbers, credit cards) is automatically redacted
-- API keys use SHA256 hashing - we never store your raw key
-- Rate limited to 60 requests/minute per API key
-- All API calls are logged for audit purposes
+### PII Redaction
+
+All conversation data returned by the API has personally identifiable information (PII) automatically stripped to protect customer privacy:
+
+| Data Type | Example | Redacted As |
+|-----------|---------|-------------|
+| Email addresses | `john@example.com` | `[EMAIL]` |
+| Phone numbers | `+1-555-123-4567` | `[PHONE]` |
+| Credit card numbers | `4111-1111-1111-1111` | `[CARD]` |
+
+This ensures you can analyze conversation patterns and chatbot performance without exposing sensitive customer data.
+
+### API Key Security
+
+- **Hashed storage**: API keys are stored as SHA256 hashes - we never store your raw key in plain text
+- **One-time display**: Your full API key is shown only once at creation - copy it immediately
+- **Instant revocation**: Revoke compromised keys immediately from your dashboard
+- **Scoped access**: Keys are scoped to specific permissions (read-only by default)
+
+### Infrastructure Security
+
+- **Rate limiting**: 60 requests/minute per API key to prevent abuse
+- **Audit logging**: All API calls are logged with timestamps, endpoints, and response codes
+- **Tenant isolation**: API keys can only access data from their own organisation
+- **HTTPS only**: All API traffic is encrypted in transit
 
 ## Supported Platforms
 
-- **Shopify** - Full integration with product sync
-- Shoptet
-- WooCommerce
-- Magento
-- PrestaShop
-- Custom XML feeds
+- **Shopify** - Full integration with product sync ([Setup guide](https://www.chaterimo.com/en/blog/shopify-ai-customer-service/))
+- **Shoptet** - Czech e-commerce platform integration
+- **Upgates** - Full API integration
+- **eshop-rychle.cz** - Czech e-commerce platform
+
+## Supported AI Models
+
+Chaterimo supports multiple LLM providers via BYOK (Bring Your Own Key) or custom plans:
+
+- **OpenAI** - ChatGPT (GPT-4, GPT-4o, GPT-3.5)
+- **Anthropic** - Claude (Claude 3.5 Sonnet, Claude 3 Opus)
+- **Google** - Gemini (Gemini Pro, Gemini Flash)
+- **xAI** - Grok
 
 ## Coming Soon (Phase 2+)
 
@@ -98,7 +132,7 @@ Get full conversation transcripts between customers and your AI chatbot.
 ## Support
 
 - Website: [chaterimo.com](https://www.chaterimo.com)
-- Documentation: [chaterimo.com/docs](https://www.chaterimo.com/en/docs/)
+- Shopify Guide: [How to connect Chaterimo with Shopify](https://www.chaterimo.com/en/blog/shopify-ai-customer-service/)
 
 ## Example Usage
 

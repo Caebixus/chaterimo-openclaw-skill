@@ -4,18 +4,33 @@ OpenClaw/ClawHub skill for [Chaterimo](https://www.chaterimo.com) - AI Customer 
 
 ## What is Chaterimo?
 
-Chaterimo is an AI-powered customer service platform that integrates with **Shopify**, Shoptet, WooCommerce, and other e-commerce platforms. It provides 24/7 automated customer support using GPT-4, Claude, and Gemini AI models.
+Chaterimo is an AI-powered customer service platform that integrates with **Shopify**, **Shoptet**, **Upgates**, and **eshop-rychle.cz** e-commerce platforms. It provides 24/7 automated customer support powered by leading LLM models: **ChatGPT**, **Claude**, **Gemini**, and **Grok**.
+
+Use your own API keys (BYOK) or choose a custom plan with included AI credits.
+
+📖 **Shopify Setup Guide:** [How to connect Chaterimo with Shopify](https://www.chaterimo.com/en/blog/shopify-ai-customer-service/)
 
 ## Features
 
 - **List Chatbots** - View all your configured AI chatbots
 - **Browse Conversations** - Search and filter customer service conversations
-- **Read Transcripts** - Get full conversation history (PII automatically redacted)
+- **Read Transcripts** - Get full conversation history with PII automatically redacted:
+  - Email addresses → `[EMAIL]`
+  - Phone numbers → `[PHONE]`
+  - Credit card numbers → `[CARD]`
+
+## Data Security
+
+- **Hashed API keys** - Keys stored as SHA256 hashes, never in plain text
+- **Tenant isolation** - Access only your organisation's data
+- **Rate limiting** - 60 req/min to prevent abuse
+- **Audit logging** - All API calls logged for security
+- **HTTPS only** - All traffic encrypted
 
 ## Quick Start
 
 1. Sign up at [chaterimo.com](https://www.chaterimo.com)
-2. Connect your Shopify store
+2. Connect your Shopify store (or Shoptet, Upgates, eshop-rychle.cz)
 3. Go to **API Keys** in your dashboard
 4. Create an API key and set it as an environment variable:
 
@@ -38,7 +53,7 @@ Assistant: Found 47 conversations...
 ## Links
 
 - Website: [chaterimo.com](https://www.chaterimo.com)
-- Documentation: [chaterimo.com/docs](https://www.chaterimo.com/en/docs/)
+- Shopify Guide: [How to connect Chaterimo with Shopify](https://www.chaterimo.com/en/blog/shopify-ai-customer-service/)
 
 ## License
 
