@@ -89,7 +89,6 @@ All conversation data returned by the API has personally identifiable informatio
 |-----------|---------|-------------|
 | Email addresses | `john@example.com` | `[EMAIL]` |
 | Phone numbers | `+1-555-123-4567` | `[PHONE]` |
-| Credit card numbers | `4111-1111-1111-1111` | `[CARD]` |
 
 This ensures you can analyze conversation patterns and chatbot performance without exposing sensitive customer data.
 

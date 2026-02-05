@@ -17,7 +17,6 @@ Use your own API keys (BYOK) or choose a custom plan with included AI credits.
 - **Read Transcripts** - Get full conversation history with PII automatically redacted:
   - Email addresses → `[EMAIL]`
   - Phone numbers → `[PHONE]`
-  - Credit card numbers → `[CARD]`
 
 ## Data Security
 
