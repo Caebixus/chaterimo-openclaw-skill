@@ -72,10 +72,12 @@ Get full conversation transcripts between customers and your AI chatbot. All per
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET /api/v1/chatbots/` | List all chatbots |
-| `GET /api/v1/chatbots/{id}/` | Get chatbot details |
-| `GET /api/v1/chatbots/{id}/conversations/` | List conversations |
-| `GET /api/v1/conversations/{id}/` | Get conversation transcript |
+| `GET /api/v1/chatbots/` | List all chatbots (returns chatbot IDs) |
+| `GET /api/v1/chatbots/{chatbot_id}/` | Get chatbot details |
+| `GET /api/v1/chatbots/{chatbot_id}/conversations/` | List conversations (returns conversation IDs) |
+| `GET /api/v1/conversations/{conversation_id}/` | Get conversation transcript |
+
+Your organisation is determined automatically from your API key - no need to specify it.
 
 ## Privacy & Data Security
 
