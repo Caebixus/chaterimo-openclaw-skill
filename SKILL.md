@@ -55,7 +55,7 @@ View customer service conversations with filters by date and platform. All custo
 > "Show me conversation #123"
 > "What did customers ask about yesterday?"
 
-Get full conversation transcripts between customers and your AI chatbot. All personally identifiable information is automatically redacted.
+Get full conversations with messages between customers and your AI chatbot. All personally identifiable information is automatically redacted.
 
 ## Setup
 
@@ -75,7 +75,7 @@ Get full conversation transcripts between customers and your AI chatbot. All per
 | `GET /api/v1/chatbots/` | List all chatbots (returns chatbot IDs) |
 | `GET /api/v1/chatbots/{chatbot_id}/` | Get chatbot details |
 | `GET /api/v1/chatbots/{chatbot_id}/conversations/` | List conversations (returns conversation IDs) |
-| `GET /api/v1/conversations/{conversation_id}/` | Get conversation transcript |
+| `GET /api/v1/conversations/{conversation_id}/` | Get full conversation with messages |
 
 Your organisation is determined automatically from your API key - no need to specify it.
 
