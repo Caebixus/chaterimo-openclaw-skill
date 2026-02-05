@@ -114,12 +114,12 @@ This ensures you can analyze conversation patterns and chatbot performance witho
 
 ## Supported AI Models
 
-Chaterimo supports multiple LLM providers via BYOK (Bring Your Own Key) or custom plans:
+Chaterimo supports multiple LLM providers via BYOK (Bring Your Own Key) or custom plans. We regularly update to include the latest models from each provider:
 
-- **OpenAI** - ChatGPT (GPT-4, GPT-4o, GPT-3.5)
-- **Anthropic** - Claude (Claude 3.5 Sonnet, Claude 3 Opus)
-- **Google** - Gemini (Gemini Pro, Gemini Flash)
-- **xAI** - Grok
+- **OpenAI** - ChatGPT (latest GPT models)
+- **Anthropic** - Claude (latest Claude models)
+- **Google** - Gemini (latest Gemini models)
+- **xAI** - Grok (latest Grok models)
 
 ## Coming Soon (Phase 2+)
 
