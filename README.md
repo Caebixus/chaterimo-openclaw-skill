@@ -29,7 +29,7 @@ Use your own API keys (BYOK) or choose a custom plan with included AI credits.
 ## Quick Start
 
 1. Sign up at [chaterimo.com](https://www.chaterimo.com)
-2. Connect your Shopify store (or Shoptet, Upgates, eshop-rychle.cz)
+2. Connect your Shopify store in Integrations section (or Shoptet, Upgates, eshop-rychle.cz)
 3. Go to **API Keys** in your dashboard
 4. Create an API key and set it as an environment variable:
 
